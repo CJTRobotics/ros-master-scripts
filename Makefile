@@ -6,12 +6,12 @@ all:
 	echo 'No rule for make all existing. Please run "sudo make install" to install ros-master-scripts'
 
 install: 
-	cp ros-master.sh /usr/local/bin/ros-master
+	install -D -m755  ros-master.sh /usr/local/bin/ros-master
 ifdef BASH_TEST
-	cp ros-master-completion.bash /etc/bash_completion.d/ros-master
+	install -D -m644 ros-master-completion.bash /etc/bash_completion.d/ros-master
 endif
 ifdef ZSH_TEST 
-	cp ros-master-completion.zsh /usr/local/share/zsh/site-functions/_ros-master
+	install -D -m644 ros-master-completion.zsh /usr/local/share/zsh/site-functions/_ros-master
 endif
 	
 remove:
