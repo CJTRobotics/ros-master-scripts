@@ -15,6 +15,7 @@ else
 fi
 
 function usage () {
+    echo "ROS_MASTER_URI: $ROS_MASTER_URI"
     echo "usage : "
     echo "$(basename ${script_name}) { -l | -j | -m | --local | --jetson | --manual }"
     echo ""
